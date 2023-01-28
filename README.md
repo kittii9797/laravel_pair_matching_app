@@ -27,4 +27,5 @@
 Login info:
 
 Email: sample0@test.com or sample1@test.com 
-password: Password
+
+Password: Password

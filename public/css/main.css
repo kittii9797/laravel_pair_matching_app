@@ -1,0 +1,205 @@
+.is-invalid-label {
+    border: 1px solid tomato;
+}
+
+.imagePreview {
+    height: 200px;
+    max-width: 140px;
+}
+img{
+    object-fit: cover;
+}
+        
+/* Dropdown Button */
+.dropbtn {
+background-color: transparent;
+color: black;
+padding: 16px;
+font-size: 15px;
+border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #fff;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+.size-matches{
+    width: 550px;
+}
+
+.size{
+    width: 450px;
+}
+.circle-img-matched{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 200px;
+    text-align: center;
+    outline: 3px solid white;
+    display: flex;
+    top: 90px;
+    z-index: 10;
+    /* box-shadow: 5px 5px 10px #3434346b; */
+}
+
+@media only screen and (max-width: 600px) {
+    .size{
+        width: 90%;
+    }
+    .circle-img-matched{
+        height: 200px;
+        width: 200px;
+    }
+}
+
+.tno i{
+    color: tomato;
+    font-size: 80px;
+}
+
+.tyes i{
+    /* color: #5de19c; */
+    font-size: 80px;
+    color: #5de19c;
+}
+.circle-img{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 200px;
+    position: relative;
+    top: 15px;
+    border: 3px solid white;
+    margin: auto;
+    /* box-shadow: 5px 5px 10px #3434346b; */
+}
+@media only screen and (max-width: 600px) {
+    .circle-img{
+        height: 200px;
+        width: 200px;
+        margin: auto;
+    }
+}
+
+
+
+.card-body.index{
+    height: 460px;
+    padding: 0px;
+}
+
+@keyframes dislikemove {
+0%{transform: rotate(0deg)scale(1.15);}
+50% {transform: rotate(35deg)scale(1.15);}
+100%{transform: rotate(0deg)scale(1.15);}
+}
+.dislike{
+    font-size: 18px;
+    color: #6c757d;
+    width: 62px;
+    height: 62px;
+    border: none;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+    background: #FEFEFE;
+}
+.like{
+    font-size: 18px;
+    color: #6c757d;
+    width: 62px;
+    height: 62px;
+    border: none;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+    background: #FEFEFE;
+}
+.like:hover {
+    color:#ff0047;
+    transform: scale(1.15);
+}
+.dislike:hover{
+    color: #137cd2;
+    transform: scale(1.15);
+    /* animation: dislikemove 3s infinite; */
+}
+@keyframes tstr {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+}
+.match{
+    opacity: 0;
+    animation: tstr 3s;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    z-index: 1;
+}
+.size-index{
+    width: 450px;
+}
+.confetti{
+    opacity: 0;
+    animation: tstr 3s;
+    background-image:url('https://i.gifer.com/origin/03/03270abe66b1c66ef8832c57aa6da0c1.gif');
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: white;
+    z-index: 1;
+}
+.confetti-message{
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    font-size: 1.15rem;
+    padding: 0px 100px;
+    z-index: 1;
+}
+.confetti-btn {
+    position: absolute;
+    z-index: 1;
+    bottom: 50px;
+    width: 100%;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .card-body.index{
+        height: 100%;
+    }
+}

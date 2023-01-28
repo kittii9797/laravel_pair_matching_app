@@ -10,8 +10,11 @@
 3. Open folder in Visual Studio Code
 
 4. Create a database with phpAdmin.
+   
    http://localhost/phpmyadmin/index.php?route=/server/databases
+   
    Database name: laravel_pair_matching_app
+   
    Character code: utf-8mb4_general_ci
 
 5. Open terminal and write :

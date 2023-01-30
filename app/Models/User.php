@@ -60,12 +60,6 @@ class User extends Authenticatable
         return $this->belongsToMany(self::class, "swipes", "from_user_id", "to_user_id")->wherePivot('is_like', $filter)->wherePivot('to_user_id', Auth::id())->withTimestamps();
     }
 
-    /* public function matches()
-    {
-        $ids = $this->to_users()->where('is_like', true)->pluck('from_user_id');
-
-        return $this->belongsToMany(self::class, "swipes", "from_user_id", "to_user_id")->wherePivot('is_like', true)->wherePivotIn('to_user_id', $ids);
-    } */
 
     public function matches()
     {
@@ -73,15 +67,4 @@ class User extends Authenticatable
         return $this->from_users()->wherePivot('is_like', true)->wherePivotIn('to_user_id', $ids);
     }
 
-    public function matches_show($num)
-    {
-        $auth = User::find(Auth::id());
-        $match_users = $auth->matches()->orderBy('id', 'asc')->get()->collect();
-        $main_user = $match_users[$num];
-        $count = $match_users->count();
-        $prev = $num - 1 < 0 ? $num : $num - 1;
-        $next = $num + 1 > $count - 1 ? $num : $num + 1;
-
-        return view('users.matches_show', compact('match_users', 'main_user', 'prev', 'next', 'num'));
-    }
 }

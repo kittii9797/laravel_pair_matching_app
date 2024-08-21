@@ -27,8 +27,22 @@
 
 
 ---------------------------------------------
+
 Login info:
 
 Email: sample0@test.com or sample1@test.com 
 
 Password: Password
+
+---------------------------------------------
+
+## Preview
+
+   Find Friend(s):
+
+   ![Preview Screen](./public/preview/image1.gif)
+
+   Matches:
+
+   ![Preview Screen](./public/preview/image2.gif)
+
